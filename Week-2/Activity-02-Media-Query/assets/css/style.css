@@ -26,10 +26,10 @@ header {
   .card {
     width: 50%;
   }
-  @media screen and (max-width: 768px) {
-    .card {
-      width: 100%;
-    }
+}
+@media screen and (max-width: 768px) {
+  .card {
+    width: 100%;
   }
 }
 .card header {
