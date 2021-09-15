@@ -26,12 +26,16 @@ header {
   .card {
     width: 50%;
   }
+  header {
+    background-color: aqua;
+  }
 }
 @media screen and (max-width: 768px) {
   .card {
     width: 100%;
   }
 }
+
 .card header {
   padding: 20px;
 }
