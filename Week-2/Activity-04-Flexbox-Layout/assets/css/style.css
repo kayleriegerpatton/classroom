@@ -20,6 +20,11 @@ main {
   color: #fff;
 }
 
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .card {
   flex: 1 0 0;
   padding: 10px;
