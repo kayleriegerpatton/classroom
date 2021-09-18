@@ -16,7 +16,11 @@ header {
 
 .navbar {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
+
 .card {
   border-style: solid;
   border-width: 1px;
