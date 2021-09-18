@@ -14,6 +14,9 @@ header {
   color: #fff;
 }
 
+.navbar {
+  display: flex;
+}
 .card {
   border-style: solid;
   border-width: 1px;
