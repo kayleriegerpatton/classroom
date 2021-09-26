@@ -21,13 +21,21 @@ const getComputerValue = function () {
 // game logic (pass in user and computer values; return win lose or draw)
 const getGameResult = function () {
     return
-}
+};
 
 // calculate and log result
 const calculateResult = function () {
     return
-}
+};
 
+// Global variables
+const playerDetails = {
+    wins: 0,
+    losses: 0,
+    draws: 0
+};
+
+let inProgress = true;
 
 // validate userValue
 // if true
