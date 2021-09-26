@@ -5,17 +5,19 @@ const getUserValue = function () {
 };
 
 // validate user choice true/false
-const isValid = function (userValue) {
+const validateValue = function (userValue) {
   return userValue === "r" || userValue === "s" || userValue === "p";
 };
-// prompt("Please enter a valid response using 'r,' 's,' or 'p.'")
-//     }
-//   return;
-// };
 
 // get computer's choice (r, s, or p)
 const getComputerValue = function () {
-  return computerValue;
+  // declare values array
+  const validValues = ["r", "s", "p"];
+  // generate random index integer
+  const randomIndex = Math.floor(Math.random() * validValues.length);
+  // use integer to access random array value
+  const randomValue = validValues[randomIndex];
+  return randomValue;
 };
 
 // game logic (pass in user and computer values; return win lose or draw)
@@ -40,4 +42,13 @@ let inProgress = true;
 // Application
 // get user value
 const userValue = getUserValue();
-console.log(userValue);
+
+// validate user value
+const isValid = validateValue(userValue);
+
+if (isValid) {
+  //  get computer value
+  const computerValue = getComputerValue();
+} else {
+  alert("Please enter a valid response using 'r,' 's,' or 'p.'");
+}
