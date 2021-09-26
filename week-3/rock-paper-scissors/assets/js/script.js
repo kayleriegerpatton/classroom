@@ -6,11 +6,8 @@ const getUserValue = function () {
 
 // validate user choice true/false
 const isValid = function (userValue) {
-    if (userValue === 'r' || userValue === 's' || userValue === 'p') {
-return true
-    } else {
-return false
-    };
+  return userValue === "r" || userValue === "s" || userValue === "p";
+};
 // prompt("Please enter a valid response using 'r,' 's,' or 'p.'")
 //     }
 //   return;
