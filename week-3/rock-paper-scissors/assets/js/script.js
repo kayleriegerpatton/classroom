@@ -1,13 +1,16 @@
 // get user value (r, s, or p)
 const getUserValue = function () {
-  return userValue
+  const userValue = prompt("Choose rock (r), paper (p), or scissors (s).");
+  return userValue;
 };
 
 // validate user choice true/false
-const isValid = function () {
-    if () {
+const isValid = function (userValue) {
+    if (userValue === 'r') {
 
     } else {
+
+    }
 prompt("Please enter a valid response using 'r,' 's,' or 'p.'")
     }
   return
@@ -20,40 +23,24 @@ const getComputerValue = function () {
 
 // game logic (pass in user and computer values; return win lose or draw)
 const getGameResult = function () {
-    return
+  return;
 };
 
 // calculate and log result
 const calculateResult = function () {
-    return
+  return;
 };
 
 // Global variables
 const playerDetails = {
-    wins: 0,
-    losses: 0,
-    draws: 0
+  wins: 0,
+  losses: 0,
+  draws: 0,
 };
 
 let inProgress = true;
 
-// validate userValue
-// if true
-// convert to lowercase
-// if false
-// alert "Please enter a valid response using 'r,' 's,' or 'p.'"
-
-// getComputerValue
-// choose a random value from array of [r, s, p]
-// store computerValue
-
-// gameLogic
-// compare userValue and computerValue
-// outputs: win, lose, or tie
-
-// displayScore
-// calculate score using increment ++
-
-// confirm if user wants to play again
-// Y - repeat from getUserValue
-// N - end
+// Application
+// get user value
+const userValue = getUserValue();
+console.log(userValue);
