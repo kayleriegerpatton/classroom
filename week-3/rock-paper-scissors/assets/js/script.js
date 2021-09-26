@@ -1,20 +1,20 @@
 // get user value (r, s, or p)
 const getUserValue = function () {
   const userValue = prompt("Choose rock (r), paper (p), or scissors (s).");
-  return userValue;
+  return userValue.toLowerCase();
 };
 
 // validate user choice true/false
 const isValid = function (userValue) {
-    if (userValue === 'r') {
-
+    if (userValue === 'r' || userValue === 's' || userValue === 'p') {
+return true
     } else {
-
-    }
-prompt("Please enter a valid response using 'r,' 's,' or 'p.'")
-    }
-  return
-};
+return false
+    };
+// prompt("Please enter a valid response using 'r,' 's,' or 'p.'")
+//     }
+//   return;
+// };
 
 // get computer's choice (r, s, or p)
 const getComputerValue = function () {
