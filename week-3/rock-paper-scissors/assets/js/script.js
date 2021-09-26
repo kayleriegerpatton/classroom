@@ -1,10 +1,37 @@
-// prompt user for input value (r, s, or p)
+// get user value (r, s, or p)
+const getUserValue = function () {
+  return userValue
+};
 
-// getUserValue
+// validate user choice true/false
+const isValid = function () {
+    if () {
+
+    } else {
+prompt("Please enter a valid response using 'r,' 's,' or 'p.'")
+    }
+  return
+};
+
+// get computer's choice (r, s, or p)
+const getComputerValue = function () {
+  return computerValue;
+};
+
+// game logic (pass in user and computer values; return win lose or draw)
+const getGameResult = function () {
+    return
+}
+
+// calculate and log result
+const calculateResult = function () {
+    return
+}
+
+
 // validate userValue
 // if true
 // convert to lowercase
-// store userValue
 // if false
 // alert "Please enter a valid response using 'r,' 's,' or 'p.'"
 
