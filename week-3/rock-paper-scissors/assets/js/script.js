@@ -22,7 +22,18 @@ const getComputerValue = function () {
 
 // game logic (return win lose or draw gameResult)
 const getGameResult = function (userValue, computerValue) {
-  return;
+  if (userValue === computerValue) {
+    const gameResult = "draw";
+  } else if (
+    (userValue === "r" && computerValue === "s") ||
+    (userValue === "s" && computerValue === "p") ||
+    (userValue === "p" && computerValue === "r")
+  ) {
+    const gameResult = "win";
+  } else {
+    const gameResult = "lose";
+  }
+  return gameResult;
 };
 
 // calculate and log result
