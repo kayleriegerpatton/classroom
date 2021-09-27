@@ -20,7 +20,7 @@ const getComputerValue = function () {
   return randomValue;
 };
 
-// game logic (return win lose or draw gameResult)
+// game logic
 const getGameResult = function (userValue, computerValue) {
   if (userValue === computerValue) {
     const gameResult = "draw";
@@ -59,6 +59,12 @@ const displayScore = function (gameResult) {
   return;
 };
 
+// confirm if user wants to play again
+const playAgain = function () {
+  const playAgainResponse = confirm("Want to play again?");
+  return playAgainResponse;
+};
+
 // Global variables
 const playerDetails = {
   wins: 0,
@@ -70,17 +76,30 @@ let inProgress = true;
 
 // Application
 // get user value
-const userValue = getUserValue();
+while ((inProgress = true)) {
+  const userValue = getUserValue();
 
-// validate user value
-const isValid = validateValue(userValue);
+  // validate user value
+  const isValid = validateValue(userValue);
 
-if (isValid) {
-  //  get computer value
-  const computerValue = getComputerValue();
-  console.log(userValue, computerValue);
-  //   display result and score
-  //   displayScore(gameResult);
-} else {
-  alert("Please enter a valid response using 'r,' 's,' or 'p.'");
+  if (isValid) {
+    //  get computer value
+    const computerValue = getComputerValue();
+    console.log(userValue, computerValue);
+
+    //   calculate and display result
+    const gameResult = getGameResult();
+    console.log(gameResult);
+    displayScore(gameResult);
+
+    // confirm play again response
+    const playAgainResponse = playAgain();
+    if (playAgainResponse) {
+      continue;
+    } else {
+      let inProgress = false;
+    }
+  } else {
+    alert("Please enter a valid response using 'r,' 's,' or 'p.'");
+  }
 }
