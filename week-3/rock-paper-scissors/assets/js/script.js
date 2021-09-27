@@ -20,13 +20,31 @@ const getComputerValue = function () {
   return randomValue;
 };
 
-// game logic (pass in user and computer values; return win lose or draw)
-const getGameResult = function () {
+// game logic (return win lose or draw gameResult)
+const getGameResult = function (userValue, computerValue) {
   return;
 };
 
 // calculate and log result
-const calculateResult = function () {
+const displayScore = function (gameResult) {
+  if (gameResult === "win") {
+    playerDetails.wins += 1;
+  } else if (gameResult === "lose") {
+    playerDetails.losses += 1;
+  } else {
+    playerDetails.draws += 1;
+  }
+
+  // scoreboard message content
+  const scoreMessage =
+    "Wins: " +
+    playerDetails.wins +
+    " | Losses: " +
+    playerDetails.losses +
+    " | Draws: " +
+    playerDetails.draws;
+
+  alert(scoreMessage);
   return;
 };
 
@@ -49,6 +67,9 @@ const isValid = validateValue(userValue);
 if (isValid) {
   //  get computer value
   const computerValue = getComputerValue();
+  console.log(userValue, computerValue);
+  //   display result and score
+  //   displayScore(gameResult);
 } else {
   alert("Please enter a valid response using 'r,' 's,' or 'p.'");
 }
