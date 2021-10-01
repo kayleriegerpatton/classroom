@@ -19,7 +19,7 @@ const incrementValue = function () {
 };
 
 const decrementValue = function () {
-  return;
+  setCounterText(--count);
 };
 
 // TODO: Add event listener to increment button
