@@ -19,7 +19,9 @@ const incrementValue = function () {
 };
 
 const decrementValue = function () {
-  setCounterText(--count);
+  if (count > 0) {
+    setCounterText(--count);
+  }
 };
 
 // TODO: Add event listener to increment button
