@@ -5,9 +5,11 @@ var shoppingListEl = $("#shopping-list");
 
 // TODO: Add an event listener to the `shoppingFormEl` to handle submission
 
-const handleSubmit = function (event) {
+shoppingFormEl.on("submit", function (event) {
   event.preventDefault();
-  //   console.log("click");
-};
+  const shoppingListItem = $("<li>");
+  const inputItem = $("#shopping-input");
 
-shoppingFormEl.on("submit", handleSubmit);
+  shoppingListItem.text(inputItem.val());
+  shoppingListEl.append(shoppingListItem);
+});
