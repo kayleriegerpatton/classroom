@@ -26,6 +26,8 @@ $("li").css({ "background-color": "#fff" });
 
 // TODO: Starting from `rootEl`, what is the statement that will use "O" to block the "X" from winning
 // HINT: Use the `.closest()`, or `.parent()` methods to go up the DOM tree
+$(".item-a3").closest("li", rowThree).text("O");
 
 // TODO: Starting from the bottom row, middle square or `.item-b3`, what is the statement that will win the game using "O"
 // HINT: Use the ".closest()", or ".parent()" methods to go up the DOM tree
+$(".item-a1").closest("li", rowOne).text("O");
