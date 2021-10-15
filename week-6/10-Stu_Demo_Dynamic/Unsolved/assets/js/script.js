@@ -1,17 +1,35 @@
-var userContainer = document.getElementById('users');
-var fetchButton = document.getElementById('fetch-button');
+const userContainer = $("#users");
+const fetchButton = $("#fetch-button");
 
-function getApi() {
-  var requestUrl = 'https://api.github.com/users?per_page=5';
+const renderUserDivs = function (data) {
+  const constructUserDiv = function (eachUser) {
+    // get login
+    const userLogin = eachUser.login;
 
-  fetch(requestUrl)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      // Use the console to examine the response
-      console.log(data);
-      // TODO: Loop through the data and generate your HTML
-    });
-}
-fetchButton.addEventListener('click', getApi);
+    // get user url
+    const userURL = eachUser.html_url;
+
+    // construct user div
+    const userDiv = `<div>
+    <h3>${userLogin}</h3>
+    <p>${userURL}</p>
+  </div>`;
+
+    // append to userContainer
+    userContainer.append(userDiv);
+  };
+  // iterate over user data
+  data.forEach(constructUserDiv);
+};
+
+const getAPI = function () {
+  const handleResponse = function (response) {
+    return response.json();
+  };
+  // get data from API
+  fetch("https://api.github.com/users?per_page=5")
+    .then(handleResponse)
+    .then(renderUserDivs);
+};
+
+fetchButton.on("click", getAPI);
