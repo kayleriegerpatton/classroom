@@ -1,0 +1,68 @@
+:root {
+  --aqua: #a9c7c3;
+  --turquoise: #4d6663;
+  --coral: #e07069;
+  --ivory: #f1efe8;
+  --green: #4daa59;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  border: 1px solid rgb(161, 161, 161);
+  background-color: transparent;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--ivory);
+}
+
+main {
+  /* background-color: var(--ivory); */
+}
+
+.navbar {
+  background-color: #4d6663;
+  border-bottom: 10px solid var(--aqua);
+}
+
+.navbar-item {
+  color: white;
+  font-weight: 700;
+}
+
+.title {
+  padding: 20px 20px 10px;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+#options-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 100px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.option-item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  /* flex-grow: 0.25; */
+  /* width: 18rem; */
+  margin: 0px 20px 20px;
+}
+
+.button {
+  background-color: var(--coral);
+  color: white;
+  display: block;
+  margin: 5px auto;
+}
