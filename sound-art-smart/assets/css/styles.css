@@ -9,18 +9,25 @@
 * {
   box-sizing: border-box;
   margin: 0px;
-  border: 1px solid rgb(161, 161, 161);
+  /* border: 1px solid rgb(161, 161, 161); */
   background-color: transparent;
   font-family: "Zen Kaku Gothic New", sans-serif;
 }
 
+html,
 body {
-  height: 100vh;
-  background-color: var(--ivory);
+  height: 100%;
+  padding: 0px;
 }
 
-main {
-  /* background-color: var(--ivory); */
+body {
+  position: relative;
+  background-image: linear-gradient(to bottom, var(--ivory), #f1efe88c),
+    url("https://images.unsplash.com/photo-1575223970966-76ae61ee7838?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80");
+  background-size: cover;
+  /* background-position: center bottom; */
+  background-color: var(--ivory);
+  padding: 0px;
 }
 
 .navbar {
@@ -28,9 +35,19 @@ main {
   border-bottom: 10px solid var(--aqua);
 }
 
+.navbar-menu {
+  background-color: var(--turquoise);
+}
+
 .navbar-item {
   color: white;
+  font-size: 1.2rem;
   font-weight: 700;
+}
+
+.navbar-item:hover {
+  background-color: var(--aqua);
+  color: var(--turquoise);
 }
 
 .title {
@@ -47,6 +64,7 @@ main {
   margin: 20px 100px;
   background-color: #ffffff;
   border-radius: 8px;
+  border: 3px solid var(--coral);
   padding: 20px;
 }
 
@@ -56,7 +74,7 @@ main {
   flex-wrap: wrap;
   justify-content: flex-end;
   /* flex-grow: 0.25; */
-  /* width: 18rem; */
+  width: 18rem;
   margin: 0px 20px 20px;
 }
 
@@ -64,5 +82,18 @@ main {
   background-color: var(--coral);
   color: white;
   display: block;
-  margin: 5px auto;
+  margin: 10px auto;
+}
+
+.button:hover {
+  background-color: #fc6358;
+  color: white;
+}
+
+@media screen and (max-width: 900px) {
+  html,
+  body {
+    background-color: var(--ivory);
+    background-image: none;
+  }
 }
