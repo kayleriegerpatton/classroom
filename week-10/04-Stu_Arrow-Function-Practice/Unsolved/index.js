@@ -61,7 +61,7 @@ var netflixQueue = {
     "Mr. Nobody",
     "The Matrix",
     "Eternal Sunshine of the Spotless Mind",
-    "Fight Club"
+    "Fight Club",
   ],
   watchMovie: () => {
     this.queue.pop();
@@ -73,10 +73,10 @@ var netflixQueue = {
     var list = "";
     for (var i = this.queue.length - 1; i >= 0; i--) {
       var currentMovie = this.queue[i];
-      list += (this.queue.length - i) + ". " + currentMovie + "\n";
+      list += this.queue.length - i + ". " + currentMovie + "\n";
     }
     console.log(list);
-  }
+  },
 };
 
 console.log("Printing movie queue!\n");
