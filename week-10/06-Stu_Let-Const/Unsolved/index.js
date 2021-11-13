@@ -29,21 +29,21 @@ const calloutCounter = () => {
 calloutCounter();
 
 // TODO: Fix the declarations so that the function works properly.
-const countMatrix = (matrix) => {
-  for (var i = 0; i < matrix.length; i++) {
-    const line = matrix[i];
-    console.log(line);
-    for (var i = 0; i < line.length; i++) {
-      const element = line[i];
-      console.log(element);
-    }
-  }
-};
-
 const matrix = [
   [1, 2, 3],
   [4, 5, 6],
   [7, 8, 9],
 ];
+
+const countMatrix = (matrix) => {
+  for (var i = 0; i < matrix.length; i++) {
+    let line = matrix[i];
+    console.log(line);
+    for (var i = 0; i < line.length; i++) {
+      let element = line[i];
+      console.log(element);
+    }
+  }
+};
 
 countMatrix(matrix);
