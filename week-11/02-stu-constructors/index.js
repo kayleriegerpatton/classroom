@@ -7,7 +7,7 @@ class Developer {
   // TODO: Include a method called 'introduction()' that introduces the Developer with their name and favorite tech
   //   introduce developer
   introduction() {
-    return `Hi, I\'m ${this.name} and I love ${this.tech}.`;
+    console.log(`Hi, I\'m ${this.name} and I love ${this.tech}.`);
   }
 }
 
@@ -15,4 +15,4 @@ class Developer {
 const kayle = new Developer("Kayle", "CSS");
 
 // TODO: Call the 'introduction()' method on the new object
-console.log(kayle.introduction());
+kayle.introduction();
