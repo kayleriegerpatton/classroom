@@ -1,0 +1,14 @@
+{
+  "name": "unsolved",
+  "version": "1.0.0",
+  "description": "",
+  "main": "boat.js",
+  "scripts": {
+    "start-boat": "node ./boat.js",
+    "start-car": "node ./car.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
