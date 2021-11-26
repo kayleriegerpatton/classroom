@@ -1,7 +1,7 @@
 // import Router from express
 const { Router } = require("express");
-const viewRoutes = require("./viewRoutes");
-const apiRoutes = require("./apiRoutes");
+const viewRoutes = require("./view/viewRoutes");
+const apiRoutes = require("./api/apiRoutes");
 
 const router = Router();
 
