@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 
 const app = express();
-const PORT = 3001;
+const PORT = 3005;
 
 // TODO: Invoke app.use() and serve static files from the '/public' folder
 
@@ -16,7 +16,7 @@ app.get("/send", (req, res) =>
 
 // TODO: Create a route that will serve up the `public/paths.html` page
 
-app.get("/routes", (req, res) =>
+app.get("/paths", (req, res) =>
   res.sendFile(path.join(__dirname, "public/paths.html"))
 );
 
