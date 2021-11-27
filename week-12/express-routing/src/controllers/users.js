@@ -15,6 +15,14 @@ const getAllUsers = (req, res) => {
 };
 
 const getUserById = (req, res) => {
+  // extract id from request
+
+  // /api/users/123 returns: {id: 123}
+  console.log(req.params);
+
+  // /api/users/123?foo=bar returns: {foo: bar}
+  console.log(req.query);
+
   res.json({ message: "run getUserById fn" });
 };
 
