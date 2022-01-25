@@ -8,18 +8,21 @@ const artistsFromDB = [
     firstName: "Georgia",
     lastName: "O'Keefe",
     birthYear: 1887,
+    deathYear: 1986,
   },
   {
     id: 333,
     firstName: "Imogen",
     lastName: "Cunningham",
     birthYear: 1883,
+    deathYear: 1976,
   },
   {
     id: 444,
     firstName: "Mark",
     lastName: "Rothko",
     birthYear: 1903,
+    deathYear: 1970,
   },
 ];
 
@@ -34,6 +37,7 @@ const artworksFromDB = [
       firstName: "Georgia",
       lastName: "O'Keefe",
       birthYear: 1887,
+      deathYear: 1986,
     },
   },
   {
@@ -46,6 +50,7 @@ const artworksFromDB = [
       firstName: "Georgia",
       lastName: "O'Keefe",
       birthYear: 1887,
+      deathYear: 1986,
     },
   },
   {
@@ -58,6 +63,7 @@ const artworksFromDB = [
       firstName: "Imogen",
       lastName: "Cunningham",
       birthYear: 1883,
+      deathYear: 1976,
     },
   },
   {
@@ -70,6 +76,7 @@ const artworksFromDB = [
       firstName: "Mark",
       lastName: "Rothko",
       birthYear: 1903,
+      deathYear: 1970,
     },
   },
   {
@@ -82,6 +89,7 @@ const artworksFromDB = [
       firstName: "Mark",
       lastName: "Rothko",
       birthYear: 1903,
+      deathYear: 1970,
     },
   },
 ];
@@ -93,6 +101,7 @@ const typeDefs = gql`
     firstName: String
     lastName: String
     birthYear: Int
+    deathYear: Int
   }
 
   type Artwork {
