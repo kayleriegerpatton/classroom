@@ -1,8 +1,7 @@
 // '/' endpoint
-const getAll = (req, res) => {
+const getAllCharacters = (req, res) => {
   req.db
-    //   *add db collection name
-    .collection("")
+    .collection("characters")
     .find()
     .toArray((error, results) => {
       if (error) {
@@ -12,4 +11,4 @@ const getAll = (req, res) => {
     });
 };
 
-module.exports = getAll;
+module.exports = getAllCharacters;

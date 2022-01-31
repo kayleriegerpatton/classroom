@@ -1,5 +1,7 @@
-const typeDefs = require("./schema/index");
-const resolvers = require("./resolvers/index");
+const { ApolloServer } = require("apollo-server");
+
+const typeDefs = require("./schema");
+const resolvers = require("./resolvers");
 
 // configure server
 const server = new ApolloServer({

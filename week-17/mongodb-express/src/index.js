@@ -1,14 +1,16 @@
+// External imports
 const express = require("express");
 const { MongoClient } = require("mongodb");
 
+// internal imports
 const dbMiddleware = require("./middleware/dbMiddleware");
 const routes = require("./routes");
 
 const PORT = 3001;
 
-// connect to new db library instance
-// * ADD COLLECTION NAME TO URL
-const mongoClient = new MongoClient("mongodb://localhost:27017/", {
+// create new db library instance
+// * ADD DATABASE NAME TO URL
+const mongoClient = new MongoClient("mongodb://localhost:27017/LOTRDb", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -18,6 +20,7 @@ const app = express();
 // middlewares
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+// attach db instance to request
 app.use(dbMiddleware(mongoClient));
 app.use(routes);
 
@@ -35,3 +38,5 @@ const init = async () => {
     console.log(`ERROR: Database connection failed | ${error.message}`);
   }
 };
+
+init();
