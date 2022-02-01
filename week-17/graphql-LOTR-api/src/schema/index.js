@@ -32,6 +32,19 @@ const typeDefs = gql`
     # query all quotes
     quotes: [Quote]
   }
+
+  # input UserInput {
+  #  name: String!
+  #  username: String!
+  #  tags: [String]
+  #}
+
+  # EXAMPLE MUTATIONS
+  #   type Mutation {
+  #   createUser(input: UserInput!): User
+  #   updateUser(input: UserInput! userId: ID!)
+  #   deleteUser(userId: ID!):
+  # }
 `;
 
 module.exports = typeDefs;

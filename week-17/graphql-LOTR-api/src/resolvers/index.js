@@ -3,14 +3,18 @@ const character = require("./character");
 const movie = require("./movie");
 const quote = require("./quote");
 
-// Review nested resolvers
-//
 const resolvers = {
+  // all resolvers that resolve a GraphQL query
   Query: {
+    //   imported resolver fns
     character,
     // movie,
     // quote,
   },
+
+  //   Mutation: {
+
+  //   }
 };
 
 module.exports = resolvers;

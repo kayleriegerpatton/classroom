@@ -3,7 +3,7 @@ const { ApolloServer } = require("apollo-server");
 const typeDefs = require("./schema");
 const resolvers = require("./resolvers");
 
-// configure server
+// create new server instance
 const server = new ApolloServer({
   typeDefs,
   resolvers,
